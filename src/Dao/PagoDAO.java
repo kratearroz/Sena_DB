@@ -10,7 +10,6 @@ package Dao;
  */
 
 import Modelo.Pago;
-import dao.ConectarBD;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

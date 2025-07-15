@@ -5,7 +5,6 @@
 package Dao;
 
 import Modelo.Usuario;
-import dao.ConectarBD;
 import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
