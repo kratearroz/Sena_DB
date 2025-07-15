@@ -35,7 +35,13 @@ public class UsuarioDAO {
 
             }
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Error: " + e);
+            String erro=e.toString();
+            if (erro.equals("java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1014' for key 'usuario.PRIMARY'")) {
+                JOptionPane.showMessageDialog(null, "Error: ya existe el usuario");
+            } else {
+                JOptionPane.showMessageDialog(null, "Error: " + e);
+                System.out.println(e);
+            }
 
         }
     }

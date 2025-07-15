@@ -4,13 +4,163 @@
  */
 package Vista;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author pc
  */
 public class UsuarioAdmin extends javax.swing.JFrame {
-    
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(UsuarioAdmin.class.getName());
+    private static UsuarioAdmin instancia;
+
+    public static UsuarioAdmin getInstancia() {
+        if(instancia==null){
+            instancia=new UsuarioAdmin();
+        }
+        return instancia;
+    }
+    
+    public JButton getBotonAgregar() {
+        return botonAgregar;
+    }
+
+    public void setBotonAgregar(JButton botonAgregar) {
+        this.botonAgregar = botonAgregar;
+    }
+
+    public JButton getBotonBuscarMod() {
+        return botonBuscarMod;
+    }
+
+    public void setBotonBuscarMod(JButton botonBuscarMod) {
+        this.botonBuscarMod = botonBuscarMod;
+    }
+
+    public JButton getBotonConsulta() {
+        return botonConsulta;
+    }
+
+    public void setBotonConsulta(JButton botonConsulta) {
+        this.botonConsulta = botonConsulta;
+    }
+
+    public JButton getBotonEliminar() {
+        return botonEliminar;
+    }
+
+    public void setBotonEliminar(JButton botonEliminar) {
+        this.botonEliminar = botonEliminar;
+    }
+
+    public JButton getBotonModificar() {
+        return botonModificar;
+    }
+
+    public void setBotonModificar(JButton botonModificar) {
+        this.botonModificar = botonModificar;
+    }
+
+    public JComboBox<String> getComboxCampoConsulta() {
+        return comboxCampoConsulta;
+    }
+
+    public void setComboxCampoConsulta(JComboBox<String> comboxCampoConsulta) {
+        this.comboxCampoConsulta = comboxCampoConsulta;
+    }
+
+    public JComboBox<String> getComboxOperadorConsulta() {
+        return comboxOperadorConsulta;
+    }
+
+    public void setComboxOperadorConsulta(JComboBox<String> comboxOperadorConsulta) {
+        this.comboxOperadorConsulta = comboxOperadorConsulta;
+    }
+
+    public JTable getTablaConsulta() {
+        return tablaConsulta;
+    }
+
+    public void setTablaConsulta(JTable tablaConsulta) {
+        this.tablaConsulta = tablaConsulta;
+    }
+
+    public JTextField getTxtCCAgreUsu() {
+        return txtCCAgreUsu;
+    }
+
+    public void setTxtCCAgreUsu(JTextField txtCCAgreUsu) {
+        this.txtCCAgreUsu = txtCCAgreUsu;
+    }
+
+    public JTextField getTxtCCModificar() {
+        return txtCCModificar;
+    }
+
+    public void setTxtCCModificar(JTextField txtCCModificar) {
+        this.txtCCModificar = txtCCModificar;
+    }
+
+    public JTextField getTxtContraseñaAgreUsu() {
+        return txtContraseñaAgreUsu;
+    }
+
+    public void setTxtContraseñaAgreUsu(JTextField txtContraseñaAgreUsu) {
+        this.txtContraseñaAgreUsu = txtContraseñaAgreUsu;
+    }
+
+    public JTextField getTxtContraseñaModificar() {
+        return txtContraseñaModificar;
+    }
+
+    public void setTxtContraseñaModificar(JTextField txtContraseñaModificar) {
+        this.txtContraseñaModificar = txtContraseñaModificar;
+    }
+
+    public JTextField getTxtCorreoAgreUsu() {
+        return txtCorreoAgreUsu;
+    }
+
+    public void setTxtCorreoAgreUsu(JTextField txtCorreoAgreUsu) {
+        this.txtCorreoAgreUsu = txtCorreoAgreUsu;
+    }
+
+    public JTextField getTxtCorreoModificar() {
+        return txtCorreoModificar;
+    }
+
+    public void setTxtCorreoModificar(JTextField txtCorreoModificar) {
+        this.txtCorreoModificar = txtCorreoModificar;
+    }
+
+    public JTextField getTxtCriterioConsulta() {
+        return txtCriterioConsulta;
+    }
+
+    public void setTxtCriterioConsulta(JTextField txtCriterioConsulta) {
+        this.txtCriterioConsulta = txtCriterioConsulta;
+    }
+
+    public JTextField getTxtNombreAgreUsu() {
+        return txtNombreAgreUsu;
+    }
+
+    public void setTxtNombreAgreUsu(JTextField txtNombreAgreUsu) {
+        this.txtNombreAgreUsu = txtNombreAgreUsu;
+    }
+
+    public JTextField getTxtNombreModificar() {
+        return txtNombreModificar;
+    }
+
+    public void setTxtNombreModificar(JTextField txtNombreModificar) {
+        this.txtNombreModificar = txtNombreModificar;
+    }
+    
+    
 
     /**
      * Creates new form Formulario
@@ -142,7 +292,7 @@ public class UsuarioAdmin extends javax.swing.JFrame {
 
         comboxCampoConsulta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CC", "Contraseña", "Correo", "Nombre" }));
 
-        comboxOperadorConsulta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contenga", "Menor", "Mayor", "Igual" }));
+        comboxOperadorConsulta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contenga", "Igual" }));
 
         tablaConsulta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -297,7 +447,7 @@ public class UsuarioAdmin extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 

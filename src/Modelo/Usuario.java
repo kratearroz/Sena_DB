@@ -15,6 +15,7 @@ public class Usuario {
     private String nombre;
 
     public Usuario() {
+        this.id_cc="-1";
     }
 
     public Usuario(String id_cc, String contraseña, String correo, String nombre) {

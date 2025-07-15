@@ -4,6 +4,10 @@
  */
 package dbproyecto;
 
+import Controlador.ControladorVistaUsuarioAdminAgregar;
+import Controlador.ControladorVistaUsuarioAdminConsultar;
+import Controlador.ControladorVistaUsuarioAdminModificar;
+
 /**
  *
  * @author pc
@@ -14,7 +18,9 @@ public class DBProyecto {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ControladorVistaUsuarioAdminModificar control=new ControladorVistaUsuarioAdminModificar();
+        ControladorVistaUsuarioAdminConsultar control1=new ControladorVistaUsuarioAdminConsultar();
+        ControladorVistaUsuarioAdminAgregar control2=new ControladorVistaUsuarioAdminAgregar();
     }
     
 }
